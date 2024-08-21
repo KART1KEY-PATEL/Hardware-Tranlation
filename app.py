@@ -10,7 +10,7 @@ translator = Translator()
 recognizer = sr.Recognizer()
 
 @app.post("/translate-audio/")
-async def translate_audio(file: UploadFile = File(...), target_lang: str = "ta"):
+async def translate_audio(file: UploadFile = File(...), target_lang: str = "fr"):
     try:
         # Read the uploaded file
         audio_data = await file.read()
